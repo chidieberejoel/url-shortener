@@ -8,13 +8,13 @@
     "node": "14.2.0"
   },
   "scripts": {
-    "migrate": "node-pg-migrate",
-    "import:build": "babel . --ignore **/node_modules --out-dir dist",
-    "heroku-postbuild": "npm run migrate up && npm run import:build",
+    "heroku-postbuild": "babel . --ignore **/node_modules --out-dir dist",
     "start": "node dist/index.js",
     "server": "babel-node index.js",
     "dev": "nodemon index.js --exec babel-node",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "migrate": "node-pg-migrate",
+    "import:db": "npm run migrate up"
   },
   "repository": {
     "type": "git",
