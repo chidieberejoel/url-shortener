@@ -15,4 +15,10 @@ export default {
     database: process.env.PGDATABASE,
     port: process.env.PGPORT,
   },
+  production: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 };
