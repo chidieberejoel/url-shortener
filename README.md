@@ -16,7 +16,7 @@ Then in your CLI, run the following commands in the order:
 
 ```
 npm install
-npm run import:db
+npm run migrate up
 npm run server
 ```
 Then load <http://localhost:5023/graphiql> in your browser. \

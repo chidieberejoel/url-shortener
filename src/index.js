@@ -24,6 +24,7 @@ const appServer = new ApolloServer({
   }),
   dataSources: () => ({}),
   introspection: true,
+  playground: true,
 });
 appServer.applyMiddleware({ app, path: "/graphiql" });
 

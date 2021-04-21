@@ -1,7 +1,6 @@
 import cors from "cors";
 import helmet from "helmet";
 
-import config from "../config";
 import redirect from "./controller";
 
 export default {
@@ -9,8 +8,7 @@ export default {
     app.use(cors());
     app.use(
       helmet({
-        contentSecurityPolicy:
-          config.nodeEnv === "production" ? undefined : false,
+        contentSecurityPolicy: false,
       }),
     );
   },
